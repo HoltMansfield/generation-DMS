@@ -1,0 +1,20 @@
+/node_modules
+/dist
+/delete
+/.vscode
+
+
+#user1 account
+Host github.com-holt-mansfield-finaeo
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/id_rsa
+   IdentitiesOnly yes
+
+#user2 account
+Host github.com-holtmansfield
+   HostName github.com
+   User git
+   IdentityFile ~/.ssh/holt_mansfield_rsa
+   IdentitiesOnly yes
+

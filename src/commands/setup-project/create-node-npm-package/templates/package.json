@@ -1,0 +1,54 @@
+{
+  "name": "@finaeo/<%= projectName %>",
+  "version": "1.0.0",
+  "description": "Please enter a description for <%= projectName %>",
+  "main": "dist/index.js",
+  "files": [
+    "./dist"
+  ],
+  "npm-scripts-explained": {
+    "build": "transplile TS into es5 in the /dist folder",
+    "build:watch": "run the build command when anything within the /src folder changes",
+    "test": "test all files matching the pattern *.test.ts",
+    "test:watch": "run the test command when anything within the /src folder changes",
+    "lint": "lint all ts files in /src folder",
+    "lint:watch": "run the lint command when anything within the /src folder changes",
+    "lint:fix": "fix all linting issues in all files * use with caution *",
+    "patch": "increment the version for patch release",
+    "minor": "increment the version for minor release",
+    "major": "increment the version for major release",
+    "publish": "deploy to our private npm server"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "build:watch": "watch 'npm run build' src",
+    "test": "jest \"src/.*\\.test\\.ts\"",
+    "test:watch": "jest \"src/.*\\.test\\.ts\" --watch",
+    "lint": "./node_modules/.bin/eslint src/**/*.ts*",
+    "lint:watch": "watch 'npm run lint' src",
+    "lint:fix": "./node_modules/.bin/eslint src/**/*.ts* --fix",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "publish": "npm run build && npm publish ./dist --access public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^12.12.18",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.3",
+    "watch": "^1.0.2",
+    "jest": "^24.9.0",
+    "@types/jest": "^24.0.24",
+    "ts-jest": "^24.2.0",
+    "testdouble": "^3.12.4",
+    "testdouble-jest": "^2.0.0"
+  }
+}

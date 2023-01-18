@@ -1,0 +1,18 @@
+[
+  {
+    "templatePath": "collection-controller.ts",
+    "destinationPath": "src/server/controllers/<%= collectionNamePlural %>.ts"
+  },
+  {
+    "templatePath": "collection-logic.ts",
+    "destinationPath": "src/logic/<%= collectionNamePlural %>-logic.ts"
+  },
+  {
+    "templatePath": "collection-repo.ts",
+    "destinationPath": "src/data/repositories/<%= collectionNamePlural %>-repo.ts"
+  },
+  {
+    "templatePath": "collection.e2e.test.ts",
+    "destinationPath": "src/server/e2e/<%= collectionNamePlural %>.e2e.test.ts"
+  }
+]

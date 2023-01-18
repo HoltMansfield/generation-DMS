@@ -1,0 +1,68 @@
+{
+  "name": "@finaeo/<%= projectName %>",
+  "version": "1.0.0",
+  "description": "Please enter a description for <%= projectName %>",
+  "main": "dist/index.js",
+  "files": [
+    "./dist"
+  ],
+  "typings": "./dist/index.d.ts",
+  "npm-scripts-explained": {
+    "build": "transplile TS into es5 in the /dist folder",
+    "build:watch": "run the build command when anything within the /src folder changes",
+    "build:silent": "do a build and ignore errors that we've specified in tsc-silent.config",
+    "clean": "delete dist folder",
+    "test": "test all files matching the pattern *.test.ts",
+    "test:watch": "run the test command when anything within the /src folder changes",
+    "lint": "lint all ts files in /src folder",
+    "lint:watch": "run the lint command when anything within the /src folder changes",
+    "lint:fix": "fix all linting issues in all files * use with caution *",
+    "patch": "increment the version for patch release",
+    "minor": "increment the version for minor release",
+    "major": "increment the version for major release",
+    "publish": "deploy to our private npm server",
+    "scrape-messages": "Scrape our components and hooks for any messages we need to translate - then we have to manually take them into the react app that uses them"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "build:watch": "watch 'npm run build' src",
+    "build:silent": "./node_modules/.bin/tsc-silent -p tsconfig.json --suppressConfig tsc-silent.config.js --compiler ../../node_modules/typescript/lib/typescript.js",
+    "clean": "rm -rf ./dist",
+    "test": "jest \"src/.*\\.test\\.ts\"",
+    "test:watch": "jest \"src/.*\\.test\\.ts\" --watch",
+    "lint": "./node_modules/.bin/eslint src/**/*.ts*",
+    "lint:watch": "watch 'npm run lint' src",
+    "lint:fix": "./node_modules/.bin/eslint src/**/*.ts* --fix",
+    "patch": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major",
+    "publish": "npm run build && npm publish ./dist --access public",
+    "scrape-messages": "node ./node_modules/@finaeo/react-i18n/dist/ScrapeMessages.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "overmind": "^21.0.0",
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.18",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "@finaeo/react-i18n": "1.0.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.17.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.3",
+    "watch": "^1.0.2",
+    "jest": "^24.9.0",
+    "@types/jest": "^24.0.24",
+    "ts-jest": "^24.2.0",
+    "testdouble": "^3.12.4",
+    "testdouble-jest": "^2.0.0",
+    "tsc-silent": "^1.2.1"
+  }
+}

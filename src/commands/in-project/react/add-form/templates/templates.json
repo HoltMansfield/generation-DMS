@@ -1,0 +1,6 @@
+[
+  {
+    "templatePath": "/new-component.tsx",
+    "destinationPath": "src/components/<%= formNameSnakeCase %>/<%= formNamePascalCase %>.tsx"
+  }
+]

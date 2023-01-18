@@ -1,0 +1,63 @@
+{
+  "name": "holto-cli",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./dist/index.js",
+  "bin": {
+    "holto-cli": "./dist/index.js"
+  },
+  "npm-script-explained": {
+    "build": "transplile TS into es5 in the /dist folder",
+    "build:watch": "run the build command when anything within the /src folder changes",
+    "test": "test all files matching the pattern *.test.ts",
+    "test:watch": "run the test command when anything within the /src folder changes",
+    "lint": "lint all ts files in /src folder",
+    "lint:watch": "run the lint command when anything within the /src folder changes",
+    "lint:fix": "fix all linting issues in all files * use with caution *"
+  },
+  "scripts": {
+    "build": "tsc -p .",
+    "build:watch": "watch 'npm run build && npm link' src",
+    "lint": "eslint src/**/*.ts",
+    "lint:watch": "watch 'npm run lint' src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/line-reader": "0.0.28",
+    "@types/ramda": "^0.26.38",
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "commander": "^4.0.1",
+    "figlet": "^1.2.4",
+    "glob": "^7.1.6",
+    "line-reader": "^0.4.0",
+    "lodash": "^4.17.15",
+    "node-fs-extra": "^0.8.2",
+    "path": "^0.12.7",
+    "pluralize": "^8.0.0",
+    "ramda": "^0.26.1",
+    "serialize-error": "^5.0.0",
+    "shelljs": "^0.8.3",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.17",
+    "@types/clear": "^0.1.0",
+    "@types/express": "^4.17.2",
+    "@types/figlet": "^1.2.0",
+    "@types/jest": "^24.0.24",
+    "@types/lodash": "^4.14.149",
+    "@types/shelljs": "^0.8.6",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
+  }
+}

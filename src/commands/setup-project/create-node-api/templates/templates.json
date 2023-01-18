@@ -1,0 +1,14 @@
+[
+  {
+    "templatePath": "package.json",
+    "destinationPath": "package.json"
+  },
+  {
+    "templatePath": "development.env",
+    "destinationPath": "env/development.env"
+  },
+  {
+    "templatePath": "e2e.env",
+    "destinationPath": "env/e2e.env"
+  }
+]

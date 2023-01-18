@@ -1,0 +1,38 @@
+[
+  {
+    "templatePath": ".eslintrc.js",
+    "destinationPath": ".eslintrc.js"
+  },
+  {
+    "templatePath": ".gitignore",
+    "destinationPath": ".gitignore"
+  },
+  {
+    "templatePath": ".prettierrc.js",
+    "destinationPath": ".prettierrc.js"
+  },
+  {
+    "templatePath": "jest.config.js",
+    "destinationPath": "jest.config.js"
+  },
+  {
+    "templatePath": "tsconfig.json",
+    "destinationPath": "tsconfig.json"
+  },
+  {
+    "templatePath": "package.json",
+    "destinationPath": "package.json"
+  },
+  {
+    "templatePath": "setupTests.js",
+    "destinationPath": "setupTests.js"
+  },
+  {
+    "templatePath": ".circleci/config.yml",
+    "destinationPath": ".circleci/config.yml"
+  },
+  {
+    "templatePath": "src/index.ts",
+    "destinationPath": "src/index.ts"
+  }
+]

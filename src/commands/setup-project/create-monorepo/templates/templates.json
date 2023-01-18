@@ -1,0 +1,35 @@
+[
+  {
+    "templatePath": "backend-package.json",
+    "destinationPath": "backend/package.json"
+  },
+  {
+    "templatePath": "frontend-package.json",
+    "destinationPath": "frontend/package.json"
+  },
+  {
+    "templatePath": "data-model-package.json",
+    "destinationPath": "data-model/package.json"
+  },
+  {
+    "templatePath": "user/repo.ts",
+    "destinationPath": "backend/src/data/repositories/users-repo.ts"
+  },
+  {
+    "templatePath": "user/logic.ts",
+    "destinationPath": "backend/src/logic/users-logic.ts"
+  },
+  {
+    "templatePath": "user/controller.ts",
+    "destinationPath": "backend/src/server/controllers/users.ts"
+  },
+  {
+    "templatePath": "user/e2e-setup.ts",
+    "destinationPath": "backend/src/server/e2e/e2e-setup.ts"
+  },
+  {
+    "templatePath": "user/get-e2e-jwt.ts",
+    "destinationPath": "backend/src/server/e2e/get-e2e-jwt.ts"
+  }
+
+]

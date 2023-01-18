@@ -1,0 +1,23 @@
+{
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "data-model",
+    "packages/*"
+  ],
+  "npm-scripts-explained": {
+    "start-sites": "Start all sites",
+    "build-packages": "This runs the command: build:silent for all packages",
+    "clean-packages": "This deletes the /dist folder in all packages",
+    "nuke": "Remove all node_modules, dist & build folders",
+    "lint:fix": "Lint all projects"
+  },
+  "scripts": {
+    "start-sites": "yarn workspaces foreach run start-site ",
+    "build-packages": "yarn workspaces foreach build:silent",
+    "clean-packages": "yarn workspaces foreach clean",
+    "nuke": "rm -rf node_modules && rm -rf dist && rm -rf build",
+    "lint:fix": "yarn workspaces foreach lint:fix"
+  }
+}
