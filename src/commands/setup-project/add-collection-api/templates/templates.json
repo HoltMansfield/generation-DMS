@@ -1,0 +1,22 @@
+[
+  {
+    "templatePath": "useCreateCollection.tmp",
+    "destinationPath": "/src/DMS/hooks/api/collections/<%= collectionNameSnakeCase %>/useCreate<%= collectionNamePascalCase %>.ts"
+  },
+  {
+    "templatePath": "useDeleteCollection.tmp",
+    "destinationPath": "/src/DMS/hooks/api/collections/<%= collectionNameSnakeCase %>/useDelete<%= collectionNamePascalCase %>.ts"
+  },
+  {
+    "templatePath": "useFindCollection.tmp",
+    "destinationPath": "/src/DMS/hooks/api/collections/<%= collectionNameSnakeCase %>/useFind<%= collectionNamePascalCase %>.ts"
+  },
+  {
+    "templatePath": "useFindCollections.tmp",
+    "destinationPath": "/src/DMS/hooks/api/collections/<%= collectionNameSnakeCase %>/useFind<%= collectionNamePluralPascalCase %>.ts"
+  },
+  {
+    "templatePath": "useUpdateCollection.tmp",
+    "destinationPath": "/src/DMS/hooks/api/collections/<%= collectionNameSnakeCase %>/useUpdate<%= collectionNamePascalCase %>.ts"
+  }
+]

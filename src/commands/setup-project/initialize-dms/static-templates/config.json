@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "communication-layer": {
+    "communication-type": "react-query"
+  },
+  "help": {
+    "communication-layer": {
+      "communication-type": "react-query | axios"
+    }
+  }
+}

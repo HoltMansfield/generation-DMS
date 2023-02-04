@@ -1,10 +1,10 @@
-import shell from '../../../logic/shell'
-import messages from '../../../logic/console-messages'
-import fileSystem from '../../../logic/file-system'
-import { addStaticTemplates, addDynamicTemplates, updateDynamicTemplates } from '../../../logic/template-manager'
+import shell from '../../../../logic/shell'
+import messages from '../../../../logic/console-messages'
+import fileSystem from '../../../../logic/file-system'
+import { addStaticTemplates, addDynamicTemplates, updateDynamicTemplates } from '../../../../logic/template-manager'
 import templateJson from './templates/templates.json'
-import { createNodeApiForMonorepo } from '../create-node-api/create-node-api'
-import { createReactAppForMonorepo } from '../create-react-app/create-react-app'
+import { createNodeApiForMonorepo } from '../create-node-api/create-node-api.bk'
+import { createReactAppForMonorepo } from '../create-react-app/create-react-app.bk'
 
 const createFolders = async (root: string, projectName: string): Promise<void> => {
   try {

@@ -4,7 +4,8 @@ import { serializeError } from 'serialize-error'
 const log = console.log
 
 const info = (content: string): void => {
-  log(chalk.yellow(content))
+  //log(chalk.yellow(content))
+  log(content)
 }
 
 const label = (label: string, data: Object): void => {

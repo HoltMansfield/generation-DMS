@@ -1,26 +1,15 @@
-import { addRoute } from '../commands/in-project/react/add-route/add-route'
-import { addHook } from '../commands/in-project/react/add-hook/add-hook'
-import { addForm } from '../commands/in-project/react/add-form/add-form'
-import { createReactApp } from '../commands/setup-project/create-react-app/create-react-app'
+import { addCollectionApi } from "../commands/setup-project/add-collection-api/add-collection-api"
+import { initializeDms } from "../commands/setup-project/initialize-dms/initialize"
+
 
 export const addReactCommands = (program: any): void => {
   program
-    .command('create-react-app <projectName>')
-    .description('Create a react app')
-    .action((projectName: string) => createReactApp(projectName))
+    .command('initialize')
+    .description('Initialize a react app for usage with Generation-DMS')
+    .action(() => initializeDms())
 
   program
-    .command('add-route <url>')
-    .description('Create a route for our react app')
-    .action((url: string) => addRoute(url))
-
-  program
-    .command('add-hook <hookName>')
-    .description('Create a react hook and accompanying test')
-    .action((url: string) => addHook(url))
-
-  program
-    .command('add-form <formName>')
-    .description('Create a form based on JSON specification')
-    .action((formName: string) => addForm(formName))
+    .command('add-collection-api <collectionName>')
+    .description('Create hooks for communicating with the backend for a given collection')
+    .action((collectionName: string) => addCollectionApi(collectionName))
 }

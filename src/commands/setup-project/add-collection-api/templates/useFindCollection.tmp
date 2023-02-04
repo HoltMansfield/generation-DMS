@@ -1,0 +1,22 @@
+import { useQuery } from 'react-query'
+import { <%= collectionNamePascalCase %> } from '../../../../collections/<%= collectionName %>'
+import { HttpError } from '../../../../types/api'
+import { useCollection } from "../../useCollection"
+
+export const useFind<%= collectionNamePascalCase %> = (query: object) => {
+  const { findOne } = useCollection('<%= collectionNamePlural %>')
+
+  const _fetcher = async (): Promise<<%= collectionNamePascalCase %>> => {
+    const result = await findOne(query)
+    return result as <%= collectionNamePascalCase %> 
+  }
+
+  const { status, error, data } = useQuery<<%= collectionNamePascalCase %>, HttpError>(
+    ['find<%= collectionNamePascalCase %>', { _id: 1 }],
+    _fetcher
+  )
+
+  return {
+    status, error, data
+  } as const
+}

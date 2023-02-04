@@ -1,0 +1,21 @@
+import { useMutation } from 'react-query'
+import { <%= collectionNamePascalCase %> } from '../../../../collections/<%= collectionName %>'
+import { HttpError } from '../../../../types/api'
+import { useCollection } from "../../useCollection"
+
+export const useUpdate<%= collectionNamePascalCase %> = () => {
+  const { updateOne } = useCollection('<%= collectionNamePlural %>')
+
+  const _request = async (query: object, update: object): Promise<<%= collectionNamePascalCase %>> => {
+    const result = await updateOne(query, update)
+    return result as <%= collectionNamePascalCase %> 
+  }
+ 
+  const mutation = useMutation<<%= collectionNamePascalCase %>, HttpError, { query: object, update: object }, () => void>(async document => {
+    return _request(document.query, document.update)
+  })
+
+  return {
+    mutation
+  } as const
+}

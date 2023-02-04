@@ -1,0 +1,25 @@
+import { useMutation } from 'react-query'
+import { <%= collectionNamePascalCase %> } from '../../../../collections/<%= collectionName %>'
+import { HttpError } from '../../../../types/api'
+import { useCollection } from "../../useCollection"
+
+export const useCreate<%= collectionNamePascalCase %> = () => {
+  const { insertOne } = useCollection('<%= collectionNamePlural %>')
+
+  const _request = async (document: <%= collectionNamePascalCase %>): Promise<<%= collectionNamePascalCase %>> => {
+    const result = await insertOne(document)
+    return result as <%= collectionNamePascalCase %> 
+  }
+ 
+  const mutation = useMutation<<%= collectionNamePascalCase %>, HttpError, <%= collectionNamePascalCase %>, () => void>(async document => {
+    const response = await _request(document)
+    //@ts-ignore
+    const _id = response.insertedId
+
+    return { ...document, _id }
+  })
+
+  return {
+    mutation
+  } as const
+}

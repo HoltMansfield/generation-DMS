@@ -1,0 +1,21 @@
+import { useMutation } from 'react-query'
+import { <%= collectionNamePascalCase %> } from '../../../../collections/<%= collectionName %>'
+import { HttpError } from '../../../../types/api'
+import { useCollection } from "../../useCollection"
+
+export const useDelete<%= collectionNamePascalCase %> = () => {
+  const { deleteOne } = useCollection('<%= collectionNamePlural %>')
+
+  const _request = async (query: object): Promise<<%= collectionNamePascalCase %>> => {
+    const result = await deleteOne(query)
+    return result as <%= collectionNamePascalCase %> 
+  }
+ 
+  const mutation = useMutation<<%= collectionNamePascalCase %>, HttpError, any, () => void>(async document => {
+    return _request(document)
+  })
+
+  return {
+    mutation
+  } as const
+}

@@ -1,10 +1,10 @@
 {
-  "name": "holto-cli",
+  "name": "dms-cli",
   "version": "0.0.0",
   "description": "",
   "main": "./dist/index.js",
   "bin": {
-    "holto-cli": "./dist/index.js"
+    "dms-cli": "./dist/index.js"
   },
   "npm-script-explained": {
     "build": "transplile TS into es5 in the /dist folder",
