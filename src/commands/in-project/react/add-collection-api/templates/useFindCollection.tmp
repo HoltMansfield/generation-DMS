@@ -12,7 +12,7 @@ export const useFind<%= collectionNamePascalCase %> = (query: object) => {
   }
 
   const { status, error, data } = useQuery<<%= collectionNamePascalCase %>, HttpError>(
-    ['find<%= collectionNamePascalCase %>', { _id: 1 }],
+    ['find<%= collectionNamePascalCase %>', query],
     _fetcher
   )
 

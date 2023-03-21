@@ -1,4 +1,4 @@
-import { addCollectionApi } from "../commands/setup-project/add-collection-api/add-collection-api"
+import { addCollectionApi } from "../commands/in-project/react/add-collection-api/add-collection-api"
 import { initializeDms } from "../commands/setup-project/initialize-dms/initialize"
 
 

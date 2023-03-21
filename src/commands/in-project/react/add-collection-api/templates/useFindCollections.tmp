@@ -3,7 +3,7 @@ import { <%= collectionNamePascalCase %> } from '../../../../collections/<%= col
 import { HttpError } from '../../../../types/api'
 import { useCollection } from "../../useCollection"
 
-export const useFind<%= collectionNamePascalCase %> = (query: object) => {
+export const useFind<%= collectionNamePluralPascalCase %> = (query: object) => {
   const { find } = useCollection('<%= collectionNamePlural %>')
 
   const _fetcher = async (): Promise<<%= collectionNamePascalCase %>[]> => {
@@ -12,7 +12,7 @@ export const useFind<%= collectionNamePascalCase %> = (query: object) => {
   }
 
   const { status, error, data } = useQuery<<%= collectionNamePascalCase %>[], HttpError>(
-    ['findUsers', { _id: 1 }],
+    ['find<%= collectionNamePluralPascalCase %>', query],
     _fetcher
   )
 

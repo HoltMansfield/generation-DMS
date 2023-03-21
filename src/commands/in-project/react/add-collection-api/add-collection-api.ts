@@ -1,10 +1,10 @@
 import pluralize from 'pluralize'
-import shell from '../../../logic/shell'
-import messages from '../../../logic/console-messages'
-import fileSystem from '../../../logic/file-system'
-import { addDynamicTemplates, updateDynamicTemplates } from '../../../logic/template-manager'
+import shell from '../../../../logic/shell'
+import messages from '../../../../logic/console-messages'
+import fileSystem from '../../../../logic/file-system'
+import { addDynamicTemplates, updateDynamicTemplates } from '../../../../logic/template-manager'
 import templateJson from './templates/templates.json'
-import strings from '../../../logic/strings'
+import strings from '../../../../logic/strings'
 
 const getTemplateData = (collectionName: string) => {
   const collectionNamePlural =  pluralize(collectionName)
